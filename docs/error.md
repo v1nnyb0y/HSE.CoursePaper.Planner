@@ -1,6 +1,6 @@
 ---
-permalink: /404.html
-layout: default
+permalink: /404
+layout: error
 ---
 
 <style type="text/css" media="screen">
@@ -20,6 +20,6 @@ layout: default
 <div class="container">
   <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p><strong>Try to refresh this page</strong></p>
+  <p>We hope, everything is fine with the site :)</p>
 </div>
