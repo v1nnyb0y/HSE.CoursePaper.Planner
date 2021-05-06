@@ -8,28 +8,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish:
+  PROD:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Archive project to ZIP
-        uses: papeloto/action-zip@v1
-        with: 
-          files: ./OmnySync.Script
-          dest:  ${{ github.workspace }}/release/OmnySync.Script.zip
-
-      - name: Archive project to Tar.gz
-        uses: papeloto/action-zip@v1
-        with: 
-          files: ./OmnySync.Script
-          dest:  ${{ github.workspace }}/release/OmnySync.Script.tar.gz
-
       - name: Upload files to Google Drive
         uses: Jodebu/upload-to-drive@master
         with:
-          target: ${{ github.workspace }}/release
+          target: ./OmnySync.Script
           credentials: ${{ secrets.GOOGLE_CRED }}
           folder: ${{ secrets.FOLDER_ID }}
 
