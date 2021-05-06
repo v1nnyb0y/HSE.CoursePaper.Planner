@@ -17,6 +17,7 @@ jobs:
       - name: Upload files to Google Drive
         uses: Jodebu/upload-to-drive@master
         with:
+          name: OmnySync.Script
           target: ./OmnySync.Script
           credentials: ${{ secrets.GOOGLE_CRED }}
           folder: ${{ secrets.FOLDER_ID }}
