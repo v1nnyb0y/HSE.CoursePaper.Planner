@@ -46,7 +46,7 @@ function write_file {
     echo >> $SETUP_NAME
     echo "##### Writing file: ./$1 #####" >> $SETUP_NAME
     echo "cat >\"$path\" <<EOL" >> $SETUP_NAME
-    cat $1 >> $SETUP_NAME
+    cat $1 | sed -e 's/\$/\\\$/g' >> $SETUP_NAME
     echo >> $SETUP_NAME
     echo "EOL" >> $SETUP_NAME
     echo "echo \"[ OK ] File $1 writed!\"" >> $SETUP_NAME
