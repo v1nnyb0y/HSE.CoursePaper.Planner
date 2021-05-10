@@ -6,9 +6,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Vadim Zhdanov
 show_downloads: true
 github:
-    zip_url: https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1y_-TiHRxnYLlsC3Zi1x5SM2lh14XNvpI
-    tar_url: https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1y_-TiHRxnYLlsC3Zi1x5SM2lh14XNvpI
-
+    zip_url: https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1MdBuG_E8bbHbjXk5GhKTa50pR8b3vo3t
+    tar_url: https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1MdBuG_E8bbHbjXk5GhKTa50pR8b3vo3t
 # Build settings
 theme: jekyll-theme-slate
 plugins:
