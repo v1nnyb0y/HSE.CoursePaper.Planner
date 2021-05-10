@@ -16,6 +16,7 @@ fi
 title=''
 executor=''
 num=''
+ztime=''
 
 if [ ! -f $data_path ]; then
     echo "# -*- coding: utf-8 -*-" > $data_path
@@ -23,20 +24,22 @@ if [ ! -f $data_path ]; then
     echo "$data_var = []" >> $data_path
 fi
 
-if [ $# -eq 3 ]; then
+if [ $# -eq 4 ]; then
     title="$1"
     executor="$2"
     num="$3"
+    ztime="$4"
 else
     while [ -n "$1" ]; do
         case "$1" in
             -t) shift;title="$1";;
             -e) shift;executor="$1";;
             -n) shift;num="$1";;
+            -z) shift;ztime="$1";;
             *) ;;
         esac
         shift
     done
 fi
 
-echo "$data_var.append(Task(\"$title\", \"$executor\", \"$num\"))" >> $data_path
+echo "$data_var.append(Task(\"$title\", \"$executor\", \"$num\", \"$ztime\"))" >> $data_path

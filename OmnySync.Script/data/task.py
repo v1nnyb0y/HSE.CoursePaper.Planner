@@ -19,15 +19,16 @@ class Task:
 
     def add_to_notion(self):
         title = f"{self.title} | {self.num}"
-        for row in notionData['page'].collection.get_rows():
+        time = (float) (self.time.replace(',', '.'))
+        for row in notionData['tasks_database'].collection.get_rows():
             if row.Task == title and (len(self.executor) <= 0 or
-               row.Person in self.executor):
+               row.Person in self.executor) and row.Time == time:
                 return False
 
         row = notionData['tasks_database'].collection.add_row()
         row.Task = title
         row.Person = self.executor[0] if len(self.executor) > 0 else []
-        row.Time = self.time
+        row.Time = time
         row.Complete = self.complete
         return True
 
@@ -37,5 +38,4 @@ class Task:
             if u[0] in self.executor:
                 names.append(i)
 
-        return f"{self.title}|{';'.join(names)}|" + \
-               f"{self.num}|{self.time}|{self.complete}"
+        return f"{self.title}|{';'.join(names)}|{self.num}|{self.time}|{self.complete}"

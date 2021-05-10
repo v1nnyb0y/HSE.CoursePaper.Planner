@@ -11,8 +11,8 @@ def take_rows():
                 title,
                 row.Person,
                 num,
-                60 * (row.Time or 0),
-                1 if row.Сompleted else 0
+                ((str)(row.Time or 1)).replace('.', ','),
+                1 if row.Complete else 0
             )
             f.write(str(task) + '\n')
 

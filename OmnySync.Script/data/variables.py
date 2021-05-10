@@ -8,10 +8,7 @@ from notion.client import NotionClient
 
 INSTALL_PATH = '/opt/sync_notion'
 
-_AUTH_TOKEN = 'bd4d288d2278c964c49c72b0cac90f78aef2fbedb00' \
-            'f030665b7e2f4746279c00d2f5f385bb37e67ad36e5445' \ 
-            'f749c66a227e082eb6743eaecf90a92c5eeecee288b2d4bd44' \
-            '2ebbb35ee178e79f1'
+_AUTH_TOKEN = 'bd4d288d2278c964c49c72b0cac90f78aef2fbedb00f030665b7e2f4746279c00d2f5f385bb37e67ad36e5445f749c66a227e082eb6743eaecf90a92c5eeecee288b2d4bd442ebbb35ee178e79f1'
 
 _PAGE_URL = 'https://www.notion.so/vmylife/Test-93c78278d51949f1b0dd8c80660f6abe'
 

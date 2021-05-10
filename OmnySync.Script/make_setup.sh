@@ -17,7 +17,7 @@ if [[ \$EUID -ne 0 ]]; then
     exit
 fi
 
-pip install notion
+pip3 install git+https://github.com/c0j0s/notion-py@master#egg=notion
 if [ \$? -ne 0 ]; then
     echo "[ERR ] Notion not installed!"
     exit
@@ -61,14 +61,10 @@ write_file add_to_omny.py
 write_file from_omny.sh
 write_file to_omny.sh
 
-write_file publish.applescript
-write_file refresh.applescript
-
 cat >>$SETUP_NAME << EOL
-chmod u+x "\$INSTALL_PATH/from_onmy.sh"
+chmod -R 777 \$INSTALL_PATH
+chmod u+x "\$INSTALL_PATH/from_omny.sh"
 chmod u+x "\$INSTALL_PATH/to_omny.sh"
-chmod -R 755 \$INSTALL_PATH
 
-osacompile -o "\$OMNIPLAN_SRC/publish.scpt" "\$INSTALL_PATH/publish.applescript"
-osacompile -o "\$OMNIPLAN_SRC/refresh.scpt" "\$INSTALL_PATH/refresh.applescript"
+cp -r *.scpt \$OMNIPLAN_SRC/
 EOL
