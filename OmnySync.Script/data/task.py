@@ -1,4 +1,4 @@
-from .variables import users, notionData
+from variables import users, notionData
 from notion.collection import Collection
 
 
