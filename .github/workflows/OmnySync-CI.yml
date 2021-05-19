@@ -26,7 +26,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          python3 -m unittest -v OmnySync/.Script/data/tests/tests_TaskCreationProcess.py
+          python3 -m unittest -v ./OmnySync.Script/data/tests/tests_TaskCreationProcess.py
 
   TestTaskProccesses:
     runs-on: ubuntu-latest
@@ -46,7 +46,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          python3 -m unittest -v OmnySync/.Script/data/tests/tests_TaskProccesses.py
+          python3 -m unittest -v ./OmnySync.Script/data/tests/tests_TaskProccesses.py
         
 
   PROD:
