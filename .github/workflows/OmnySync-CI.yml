@@ -22,12 +22,11 @@ jobs:
       - name: Install dependencies
         run: | 
           python -m pip install --upgrade pip
-          pip install unittest
           pip install notion
 
       - name: Run Tests
         run: |
-          python3 -m unittest -v ./OmnySync.Script/data/tests/tests_TaskCreationProcess.py
+          python -m unittest -v ./OmnySync.Script/data/tests/tests_TaskCreationProcess.py
 
   TestTaskProccesses:
     runs-on: ubuntu-latest
@@ -43,12 +42,11 @@ jobs:
       - name: Install dependencies
         run: | 
           python -m pip install --upgrade pip
-          pip install unittest
           pip install notion
 
       - name: Run Tests
         run: |
-          python3 -m unittest -v ./OmnySync.Script/data/tests/tests_TaskProccesses.py
+          python -m unittest -v ./OmnySync.Script/data/tests/tests_TaskProccesses.py
         
 
   PROD:
