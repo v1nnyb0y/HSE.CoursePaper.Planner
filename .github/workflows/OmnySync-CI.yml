@@ -51,6 +51,7 @@ jobs:
 
   PROD:
     runs-on: ubuntu-latest
+    needs: [TestTaskCreationProcess, TestTaskProccesses] 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
